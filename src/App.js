@@ -1,13 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
 import './App.css';
+import './Dashboard/Dashboard'
+import Dashboard from './Dashboard/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      Test
+      <Dashboard/>
     </div>
-  );
+  )
 }
 
 export default App;
+
