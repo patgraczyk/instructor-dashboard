@@ -5,10 +5,12 @@ import {AppBar, Toolbar, Typography, Badge, Divider, Drawer, List, ListItem,List
 import CssBaseline from '@material-ui/core/CssBaseline';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import EuroSymbol from '@material-ui/icons/EuroSymbol'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
+import ListIcon from '@material-ui/icons/Assessment';
 import MailIcon from '@material-ui/icons/Mail';
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper';
@@ -51,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'row',
-    marginLeft: '210px'
+    marginLeft: '180px'
   },
 }));
 
@@ -102,18 +104,18 @@ function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Inbox', 'Bookings'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <MailIcon /> : <EuroSymbol />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['All reports', 'Reports 2019', 'Reports 2018'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{<ListIcon/>}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
@@ -126,29 +128,27 @@ function PersistentDrawerLeft() {
       >  
       <div className={classes.drawerHeader}>
         {/* ORDERS TABLE DISPPLAY */}
-        <Grid container spacing={10}>
+        <Grid container spacing={7}>
             <Grid item xs>
               <Paper className={classes.paper}>
               <OrdersTable/>
               </Paper>  
             </Grid>
              {/* LINE CHART DISPLAY */}
-             <Grid item xs={12} md={8} lg={9}>
+             <Grid item xs>
              <Paper className={classes.paper}>
                   <HighChart/>
                 </Paper>
             </Grid>
             {/* BAR CHART DISPLAY */}
-            <Grid item xs={12} md={8} lg={9}>
+            <Grid item xs>
             <Paper className={classes.paper}>
                   <Chart/>
                 </Paper>
             </Grid>
         </Grid>
         </div>
-
         </main>
-
     <div>
       <Footer />
     </div>

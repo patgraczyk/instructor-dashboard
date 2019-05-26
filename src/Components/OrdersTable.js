@@ -21,14 +21,7 @@ const rows = [
   createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'Long Branch, NJ', 'VISA ⠀•••• 5919', 212.79),
 ];
 
-// const useStyles = makeStyles(theme => ({
-//   seeMore: {
-//     marginTop: theme.spacing(3),
-//   },
-// }));
-
 export default function Orders() {
-//   const classes = useStyles();
   return (
     <React.Fragment>
       <Table size="small">
@@ -54,7 +47,7 @@ export default function Orders() {
         </TableBody>
       </Table>
       <div >
-        <Link color="primary" href="javascript:;">
+        <Link color="primary" target="_blank" href="https://www.skibro.com/en/;">
           See more orders
         </Link>
       </div>
