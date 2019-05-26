@@ -6,10 +6,11 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import OrdersData from '../Data/OrdersData.json'
+import ChartTitles from './ChartTitles';
 
 export default function Orders({data}) {
   return (
-    <React.Fragment>
+    <React.Fragment>      
       <Table size="small">
         <TableHead>
           <TableRow>

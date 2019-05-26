@@ -13,6 +13,7 @@ import OrdersTable from '../Components/OrdersTable'
 import LineChart from '../Components/LineChart'
 import Footer from './Footer'
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import ChartTitles from '../Components/ChartTitles'
 
 const drawerWidth = 240;
 
@@ -126,6 +127,7 @@ function PersistentDrawerLeft() {
           [classes.contentShift]: open,
         })}
       >  
+      <ChartTitles>Upcoming Bookings</ChartTitles>
       <div className={classes.drawerHeader}>
         {/* ORDERS TABLE DISPPLAY */}
         <Grid container spacing={7}>

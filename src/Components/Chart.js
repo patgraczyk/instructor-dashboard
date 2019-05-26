@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Line, LineChart } from 'recharts';
 import ActivitiesData from '../Data/ActivitiesData.json'
+import ChartTitles from './ChartTitles'
 
 class Chart extends Component {
     cursorStyle = {
@@ -8,6 +9,8 @@ class Chart extends Component {
     };
     render(){
         return (
+            <Fragment>
+            <ChartTitles> Activity type comparison</ChartTitles>
             <BarChart
                 width={600}
                 height={300}
@@ -20,6 +23,7 @@ class Chart extends Component {
                 <Bar dataKey="Skiing" stroke="#193256" fill="#193256" background={{ stroke: '#eee' }} isAnimationActive={true} barSize={20}/>
                 <Bar dataKey="Snowboarding" stroke="#ef3340" fill="#ef3340" background={{ stroke: '#eee' }} isAnimationActive={false} barSize={30}/>
             </BarChart>
+            </Fragment>
         )
     }
 }

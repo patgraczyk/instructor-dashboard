@@ -1,11 +1,14 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 import SalesData from '../Data/SalesData.json'
+import ChartTitles from './ChartTitles'
 
 export default class Example extends PureComponent {
   render() {
     return (
+      <Fragment>
+      <ChartTitles> Sales Comparison</ChartTitles>
       <LineChart
         width={500}
         height={300}
@@ -22,6 +25,7 @@ export default class Example extends PureComponent {
         <Line type="monotone" dataKey="Sales 2019" stroke="#8884d8" activeDot={{ r: 8 }} />
         <Line type="monotone" dataKey="Sales 2018" stroke="#82ca9d" />
       </LineChart>
+      </Fragment>
     );
   }
 }
