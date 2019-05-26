@@ -10,7 +10,7 @@ import ListIcon from '@material-ui/icons/Assessment';
 import MailIcon from '@material-ui/icons/Mail';
 import Chart from '../Components/Chart';
 import OrdersTable from '../Components/OrdersTable'
-import HighChart from '../Components/HighChart'
+import LineChart from '../Components/LineChart'
 import Footer from './Footer'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
@@ -137,7 +137,7 @@ function PersistentDrawerLeft() {
              {/* LINE CHART DISPLAY */}
              <Grid item xs>
              <Paper className={classes.paper}>
-                  <HighChart/>
+                  <LineChart/>
                 </Paper>
             </Grid>
             {/* BAR CHART DISPLAY */}

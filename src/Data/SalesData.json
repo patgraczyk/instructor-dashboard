@@ -1,0 +1,11 @@
+[
+    {
+      "name": "January", "Sales 2019": 40, "Sales 2018": 46, "amt": 2400
+    },
+    {
+        "name": "February", "Sales 2019": 50, "Sales 2018": 67, "amt": 50
+    },
+    {
+        "name": "March", "Sales 2019": 70, "Sales 2018": 69, "amt": 50
+    }
+]
