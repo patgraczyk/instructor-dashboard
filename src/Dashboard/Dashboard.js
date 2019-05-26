@@ -1,23 +1,18 @@
 import React, { Fragment } from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {AppBar, Toolbar, Typography, Badge, Divider, Drawer, List, ListItem,ListItemText,Container, Table} from '@material-ui/core'
-import CssBaseline from '@material-ui/core/CssBaseline';
-import IconButton from '@material-ui/core/IconButton';
+import {AppBar, Toolbar, Typography, Badge, Divider, Drawer, List, ListItem,ListItemText, Grid, Paper, ListItemIcon, IconButton, CssBaseline} from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import EuroSymbol from '@material-ui/icons/EuroSymbol'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ListIcon from '@material-ui/icons/Assessment';
 import MailIcon from '@material-ui/icons/Mail';
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper';
 import Chart from '../Components/Chart';
 import OrdersTable from '../Components/OrdersTable'
 import HighChart from '../Components/HighChart'
 import Footer from './Footer'
+import NotificationsIcon from '@material-ui/icons/Notifications';
 
 const drawerWidth = 240;
 
@@ -90,6 +85,11 @@ function PersistentDrawerLeft() {
           <Typography variant="h6" noWrap>
             Instructor Dashboard
           </Typography>
+          <IconButton color="inherit">
+            <Badge badgeContent={23} color="secondary">
+              <NotificationsIcon />
+            </Badge>
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
