@@ -28,6 +28,13 @@ export default function Chart() {
  <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
  <Line type="monotone" dataKey="uv" stroke="#8884d8" />
  <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
+ <XAxis dataKey="time" />
+          <YAxis>
+            <Label angle={270} position="left" style={{ textAnchor: 'middle' }}>
+              Sales ($)
+            </Label>
+          </YAxis>
+          <Line type="monotone" dataKey="amount" stroke="#556CD6" dot={false} />
 </LineChart>
 
   );

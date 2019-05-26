@@ -19,61 +19,20 @@ import Footer from './Footer'
 
 const drawerWidth = 240;
 
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     display: 'flex',
-//   },
-//   appBar: {
-//     transition: theme.transitions.create(['margin', 'width'], {
-//       easing: theme.transitions.easing.sharp,
-//       duration: theme.transitions.duration.leavingScreen,
-//     }),
-//   },
-//   appBarShift: {
-//     width: `calc(100% - ${drawerWidth}px)`,
-//     marginLeft: drawerWidth,
-//     transition: theme.transitions.create(['margin', 'width'], {
-//       easing: theme.transitions.easing.easeOut,
-//       duration: theme.transitions.duration.enteringScreen,
-//     }),
-//   },
-//   menuButton: {
-//     marginRight: theme.spacing(2),
-//   },
-//   hide: {
-//     display: 'none',
-//   },
-//   drawer: {
-//     width: drawerWidth,
-//     flexShrink: 0,
-//   },
-//   drawerPaper: {
-//     width: drawerWidth,
-//   },
-//   drawerHeader: {
-//     display: 'flex',
-//     alignItems: 'center',
-//     padding: '0 8px',
-//     ...theme.mixins.toolbar,
-//     justifyContent: 'flex-end',
-//   },
-//   content: {
-//     flexGrow: 1,
-//     padding: theme.spacing(3),
-//     transition: theme.transitions.create('margin', {
-//       easing: theme.transitions.easing.sharp,
-//       duration: theme.transitions.duration.leavingScreen,
-//     }),
-//     marginLeft: -drawerWidth,
-//   },
-//   contentShift: {
-//     transition: theme.transitions.create('margin', {
-//       easing: theme.transitions.easing.easeOut,
-//       duration: theme.transitions.duration.enteringScreen,
-//     }),
-//     marginLeft: 0,
-//   },
-// }));
+const useStyles = makeStyles(theme=>({
+  root: {
+    display:'flex',
+  },
+  fixedHeight: {
+    height: 240,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    display: 'flex',
+    overflow: 'auto',
+    flexDirection: 'column',
+  },
+}))
 
 const styles = {
     Paper: {
@@ -82,7 +41,7 @@ const styles = {
 }
 
 function PersistentDrawerLeft() {
-//   const classes = useStyles();
+  const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -146,50 +105,27 @@ function PersistentDrawerLeft() {
         </List>
       </Drawer>
       <div>
-        <Grid container>
-            <Grid item xs={12} md={8} lg={9}>
+        <Grid container spacing={10}>
+            <Grid item xs={12} md={4} lg={3}>
               <Paper>
               <OrdersTable/>
-                {/* <LeftPane styles={styles}/> */}
               </Paper>  
             </Grid>
-            <Grid item xs={12} md={4} lg={3}>
+            <Grid item xs={12} md={8} lg={9}>
                 <Paper>
                   <Chart/>
                 </Paper>
             </Grid>
-            <Grid item xs={12} md={4} lg={3}>
+            <Grid item xs={12} md={8} lg={9}>
                 <Paper>
                   <HighChart/>
                 </Paper>
             </Grid>
         </Grid>
     </div>
-      {/* <main className={classes.content}> */}
-        {/* <div className={classes.appBarSpacer} /> */}
-        {/* <Container maxWidth="lg" >
-          <Grid container spacing={3}>
-            Chart
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper>
-                <Chart />
-              </Paper>
-            </Grid>
-            Recent Deposits
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper>
-                <OrdersTable />
-              </Paper>
-            </Grid>
-            Recent Orders
-            <Grid item xs={12}>
-              <Paper >
-                <Table />
-              </Paper>
-            </Grid>
-          </Grid>
-        </Container> */}
-
+    <div>
+      <Footer />
+    </div>
     </div>
   );
 }

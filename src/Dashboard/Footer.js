@@ -14,9 +14,9 @@ function footer(props){
           textColor="primary"
           centered
         >
-          <Tab label="Item One" />
-          <Tab label="Item Two" />
-          <Tab label="Item Three" />
+          <Tab label="Check the weather" />
+          <Tab label="Contact SkiBro team" />
+          {/* <Tab label="Item Three" /> */}
         </Tabs>
       </Paper>
     </div>

@@ -25,8 +25,8 @@ class App extends Component {
                 <YAxis type="number"/>
                 <Tooltip cursor={false}/>
                 <Legend />
-                <Bar dataKey="BMW" stroke="#8884d8" fill="#8884d8" background={{ stroke: '#eee' }} isAnimationActive={true} barSize={20}/>
-                <Bar dataKey="Mercedes" stroke="#82ca9d" fill="#82ca9d" background={{ stroke: '#eee' }} isAnimationActive={false} barSize={30}/>
+                <Bar dataKey="BMW" stroke="#193256" fill="#193256" background={{ stroke: '#eee' }} isAnimationActive={true} barSize={20}/>
+                <Bar dataKey="Mercedes" stroke="#ef3340" fill="#ef3340" background={{ stroke: '#eee' }} isAnimationActive={false} barSize={30}/>
             </BarChart>
         )
     }
