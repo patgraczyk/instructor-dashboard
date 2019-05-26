@@ -19,26 +19,41 @@ import Footer from './Footer'
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles(theme=>({
+const useStyles = makeStyles(theme => ({
   root: {
-    display:'flex',
+    display: 'flex',
   },
-  fixedHeight: {
-    height: 240,
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(10),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: -drawerWidth,
+  },
+  contentShift: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 10,
+  },
+  drawerHeader: {
+    display: 'flex',
+    alignItems: 'right',
+    padding: '0 8px',
+    ...theme.mixins.toolbar,
+    justifyContent: 'flex-end',
   },
   paper: {
     padding: theme.spacing(2),
     display: 'flex',
     overflow: 'auto',
-    flexDirection: 'column',
+    flexDirection: 'row',
+    marginLeft: '210px'
   },
-}))
-
-const styles = {
-    Paper: {
-        paddng:20, marginTop: 10, marginBottom:10
-    }
-}
+}));
 
 function PersistentDrawerLeft() {
   const classes = useStyles();
@@ -104,34 +119,40 @@ function PersistentDrawerLeft() {
           ))}
         </List>
       </Drawer>
-      <div>
+      <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >  
+      <div className={classes.drawerHeader}>
         {/* ORDERS TABLE DISPPLAY */}
-        <Grid container spacing={7}>
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper>
+        <Grid container spacing={10}>
+            <Grid item xs>
+              <Paper className={classes.paper}>
               <OrdersTable/>
               </Paper>  
             </Grid>
              {/* LINE CHART DISPLAY */}
              <Grid item xs={12} md={8} lg={9}>
-                <Paper>
+             <Paper className={classes.paper}>
                   <HighChart/>
                 </Paper>
             </Grid>
             {/* BAR CHART DISPLAY */}
             <Grid item xs={12} md={8} lg={9}>
-                <Paper>
+            <Paper className={classes.paper}>
                   <Chart/>
                 </Paper>
             </Grid>
-            <Grid item xs>
-            <Footer />
-            </Grid>
         </Grid>
-    </div>
+        </div>
+
+        </main>
+
     <div>
+      <Footer />
     </div>
-    </div>
+</div>
   );
 }
 
