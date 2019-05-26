@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {AppBar, Toolbar, Typography, Badge, Divider, Drawer, List, ListItem,ListItemText} from '@material-ui/core'
+import {AppBar, Toolbar, Typography, Badge, Divider, Drawer, List, ListItem,ListItemText,Container, Table} from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -10,6 +10,12 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper';
+import Chart from '../Components/Chart';
+import OrdersTable from '../Components/OrdersTable'
+import HighChart from '../Components/HighChart'
+import Footer from './Footer'
 
 const drawerWidth = 240;
 
@@ -69,6 +75,12 @@ const drawerWidth = 240;
 //   },
 // }));
 
+const styles = {
+    Paper: {
+        paddng:20, marginTop: 10, marginBottom:10
+    }
+}
+
 function PersistentDrawerLeft() {
 //   const classes = useStyles();
   const theme = useTheme();
@@ -89,9 +101,6 @@ function PersistentDrawerLeft() {
       <CssBaseline />
       <AppBar
         position="fixed"
-        // className={clsx(classes.appBar, {
-        //   [classes.appBarShift]: open,
-        // })}
       >
         <Toolbar>
           <IconButton
@@ -99,7 +108,6 @@ function PersistentDrawerLeft() {
             aria-label="Open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            // className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
           </IconButton>
@@ -109,16 +117,11 @@ function PersistentDrawerLeft() {
         </Toolbar>
       </AppBar>
       <Drawer
-        // className={classes.drawer}
         variant="persistent"
         anchor="left"
         open={open}
-        // classes={{
-        //   paper: classes.drawerPaper,
-        // }}
       > 
       <div>
-        {/* <div className={classes.drawerHeader}> */}
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
@@ -142,17 +145,51 @@ function PersistentDrawerLeft() {
           ))}
         </List>
       </Drawer>
-      {/* <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
-        <div className={classes.drawerHeader} />
-        <Typography paragraph>
-        </Typography>
-        <Typography paragraph>
-        </Typography>
-      </main> */}
+      <div>
+        <Grid container>
+            <Grid item xs={12} md={8} lg={9}>
+              <Paper>
+              <OrdersTable/>
+                {/* <LeftPane styles={styles}/> */}
+              </Paper>  
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+                <Paper>
+                  <Chart/>
+                </Paper>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+                <Paper>
+                  <HighChart/>
+                </Paper>
+            </Grid>
+        </Grid>
+    </div>
+      {/* <main className={classes.content}> */}
+        {/* <div className={classes.appBarSpacer} /> */}
+        {/* <Container maxWidth="lg" >
+          <Grid container spacing={3}>
+            Chart
+            <Grid item xs={12} md={8} lg={9}>
+              <Paper>
+                <Chart />
+              </Paper>
+            </Grid>
+            Recent Deposits
+            <Grid item xs={12} md={4} lg={3}>
+              <Paper>
+                <OrdersTable />
+              </Paper>
+            </Grid>
+            Recent Orders
+            <Grid item xs={12}>
+              <Paper >
+                <Table />
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container> */}
+
     </div>
   );
 }
