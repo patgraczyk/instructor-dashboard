@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {AppBar, Toolbar, Typography, Badge, Divider, Drawer, List, ListItem,ListItemText,Container, Table} from '@material-ui/core'
@@ -105,26 +105,31 @@ function PersistentDrawerLeft() {
         </List>
       </Drawer>
       <div>
-        <Grid container spacing={10}>
+        {/* ORDERS TABLE DISPPLAY */}
+        <Grid container spacing={7}>
             <Grid item xs={12} md={4} lg={3}>
               <Paper>
               <OrdersTable/>
               </Paper>  
             </Grid>
+             {/* LINE CHART DISPLAY */}
+             <Grid item xs={12} md={8} lg={9}>
+                <Paper>
+                  <HighChart/>
+                </Paper>
+            </Grid>
+            {/* BAR CHART DISPLAY */}
             <Grid item xs={12} md={8} lg={9}>
                 <Paper>
                   <Chart/>
                 </Paper>
             </Grid>
-            <Grid item xs={12} md={8} lg={9}>
-                <Paper>
-                  <HighChart/>
-                </Paper>
+            <Grid item xs>
+            <Footer />
             </Grid>
         </Grid>
     </div>
     <div>
-      <Footer />
     </div>
     </div>
   );

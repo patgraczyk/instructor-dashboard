@@ -1,7 +1,5 @@
-import React, { PureComponent } from 'react';
-import {
-  PieChart, Pie, Sector, Cell,
-} from 'recharts';
+import React, { Component } from 'react';
+import {PieChart, Pie, Sector, Cell,} from 'recharts';
 
 const data01 = [
   { name: 'Group A', value: 400 }, { name: 'Group B', value: 300 },
@@ -21,7 +19,7 @@ const data02 = [
   { name: 'D2', value: 50 },
 ];
 
-export default class Example extends PureComponent {
+export default class PieChartGraph extends Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/w6wsrc52/';
 
   render() {

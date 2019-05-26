@@ -10,8 +10,8 @@ function footer(props){
         <Tabs
           value={0}
         //   onChange={this.handleChange}
-          indicatorColor="primary"
-          textColor="primary"
+          indicatorColor="#ef3340"
+          textColor="ef3340"
           centered
         >
           <Tab label="Check the weather" />
@@ -24,3 +24,7 @@ function footer(props){
 };
 
 export default footer;
+
+// still to do: 
+// 1.add more styling to the footer 
+// 2.update colors
