@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "date": "16 Mar 2019", 
+    "customerName": "Alan Danny", 
+    "meetingPoint": "Special Slope", 
+    "activity": "Snowboarding", 
+    "numberPeople": 4,
+    "totalSale": 20, 
+    "comission": 7
+  },
+  {
+    "id": 2,
+    "date": "17 Mar, 2019", 
+    "customerName": "Stuart Morphy", 
+    "meetingPoint": "Slope", 
+    "activity": "Skiing", 
+    "numberPeople": 2,
+    "totalSale": 19, 
+    "comission": 5
+  },
+  {
+    "id": 3,
+    "date": "19 Mar, 2019", 
+    "customerName": "Molly Brown", 
+    "meetingPoint": "Slope", 
+    "activity": "Skiing", 
+    "numberPeople": 1,
+    "totalSale": 190, 
+    "comission": 3
+  }
+]
