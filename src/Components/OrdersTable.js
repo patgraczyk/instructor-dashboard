@@ -18,8 +18,9 @@ export default function Orders({data}) {
             <TableCell>Customer Name</TableCell>
             <TableCell>Meeting Point</TableCell>
             <TableCell>Activity</TableCell>
+            <TableCell>Level</TableCell>
             <TableCell>Number of people</TableCell>            
-            <TableCell>Total Sale</TableCell>
+            <TableCell>Total Sale </TableCell>
             <TableCell align="right">Comission%</TableCell>
           </TableRow>
         </TableHead>
@@ -29,7 +30,9 @@ export default function Orders({data}) {
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.time}</TableCell>
               <TableCell>{row.customerName}</TableCell>
+              <TableCell>{row.meetingPoint}</TableCell>
               <TableCell>{row.activity}</TableCell>
+              <TableCell>{row.level}</TableCell>
               <TableCell>{row.numberPeople}</TableCell>
               <TableCell>{row.totalSale}</TableCell>
               <TableCell align="right">{row.comission}</TableCell>

@@ -2,9 +2,11 @@
   {
     "id": 1,
     "date": "16 Mar 2019", 
+    "time": "19:00",
     "customerName": "Alan Danny", 
     "meetingPoint": "Special Slope", 
     "activity": "Snowboarding", 
+    "level": "Beginner", 
     "numberPeople": 4,
     "totalSale": 20, 
     "comission": 7
@@ -12,9 +14,11 @@
   {
     "id": 2,
     "date": "17 Mar, 2019", 
+    "time": "11:00",
     "customerName": "Stuart Morphy", 
     "meetingPoint": "Slope", 
     "activity": "Skiing", 
+    "level": "Advanced", 
     "numberPeople": 2,
     "totalSale": 19, 
     "comission": 5
@@ -22,11 +26,37 @@
   {
     "id": 3,
     "date": "19 Mar, 2019", 
+    "time": "10:00",
     "customerName": "Molly Brown", 
     "meetingPoint": "Slope", 
     "activity": "Skiing", 
+    "level": "Intermediate", 
     "numberPeople": 1,
     "totalSale": 190, 
+    "comission": 3
+  },
+  {
+    "id": 4,
+    "date": "20 Mar, 2019", 
+    "time": "13:00",
+    "customerName": "Sheila Kelly", 
+    "meetingPoint": "Car park", 
+    "activity": "Cinematic package", 
+    "level": "Advanced", 
+    "numberPeople": 1,
+    "totalSale": 5000, 
+    "comission": 3
+  },
+  {
+    "id": 5,
+    "date": "21 Mar, 2019", 
+    "time": "14:00",
+    "customerName": "Susana Kelly", 
+    "meetingPoint": "Slope", 
+    "activity": "Children slope", 
+    "level": "Beginner", 
+    "numberPeople": 1,
+    "totalSale": 5000, 
     "comission": 3
   }
 ]
