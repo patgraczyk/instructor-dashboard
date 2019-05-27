@@ -1,12 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Line, LineChart } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import ActivitiesData from '../Data/ActivitiesData.json'
 import ChartTitles from './ChartTitles'
 
 class Chart extends Component {
-    cursorStyle = {
-        fill: 'white'
-    };
     render(){
         return (
             <Fragment>

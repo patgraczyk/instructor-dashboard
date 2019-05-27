@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {AppBar, Toolbar, Typography, Badge, Divider, Drawer, List, ListItem,ListItemText, Grid, Paper, ListItemIcon, IconButton, CssBaseline} from '@material-ui/core'
@@ -8,11 +8,11 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListIcon from '@material-ui/icons/Assessment';
 import MailIcon from '@material-ui/icons/Mail';
+import NotificationsIcon from '@material-ui/icons/Notifications';
 import Chart from '../Components/Chart';
-import OrdersTable from '../Components/OrdersTable'
+import BookingsTable from '../Components/BookingsTable'
 import LineChart from '../Components/LineChart'
 import Footer from './Footer'
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import ChartTitles from '../Components/ChartTitles'
 
 const drawerWidth = 240;
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function PersistentDrawerLeft() {
+function Dashboard() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -133,7 +133,7 @@ function PersistentDrawerLeft() {
         <Grid container spacing={7}>
             <Grid item xs>
               <Paper className={classes.paper}>
-              <OrdersTable/>
+              <BookingsTable/>
               </Paper>  
             </Grid>
              {/* LINE CHART DISPLAY */}
@@ -158,4 +158,4 @@ function PersistentDrawerLeft() {
   );
 }
 
-export default PersistentDrawerLeft;
+export default Dashboard;

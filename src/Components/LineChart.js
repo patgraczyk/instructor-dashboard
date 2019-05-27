@@ -4,7 +4,7 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 import SalesData from '../Data/SalesData.json'
 import ChartTitles from './ChartTitles'
 
-export default class Example extends PureComponent {
+export default class ComparisonChart extends PureComponent {
   render() {
     return (
       <Fragment>
